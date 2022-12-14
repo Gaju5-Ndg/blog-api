@@ -29,7 +29,7 @@ class blogController{
     static async getAllPost(req,res){
         try {
             const blog = await Blog.find({})
-            return res.status(201).json({message:"all Posts",blog})
+            return res.status(201).json(blog)
         } catch (error) {
             return res.status(400).json({error: error.message})
         }
